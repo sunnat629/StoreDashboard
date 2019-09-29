@@ -1,8 +1,8 @@
-{
+[{
   "id" : 1,
   "book_name": "Nimikh Pane: Calculuser Poth Porivromon (Hardcover)",
   "price": 400,
   "in_stock": 10,
   "request_pending": 3,
   "cover_image": "/product_20420.png"
-}
+}]
