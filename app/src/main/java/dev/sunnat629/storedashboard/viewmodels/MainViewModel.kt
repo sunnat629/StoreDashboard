@@ -27,6 +27,7 @@ class MainViewModel @Inject constructor(
 
     init {
         getAllBooks()
+        getUserDetails()
     }
 
     fun getAllBooks(){

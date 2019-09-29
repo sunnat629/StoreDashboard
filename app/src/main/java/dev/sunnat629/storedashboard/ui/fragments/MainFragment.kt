@@ -48,12 +48,11 @@ class MainFragment : Fragment() {
         })
 
         viewModel.errorMessage.observe(this, Observer {
-            Timber.tag("ASDF").d(it.toString())
+            Timber.tag("ASDF").e(it.toString())
         })
 
         viewModel.userDetails.observe(this, Observer {
             Timber.tag("ASDF").d(it.toString())
         })
     }
-
 }

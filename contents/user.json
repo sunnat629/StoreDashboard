@@ -14,13 +14,15 @@
     }
   },
   "vendor_in_charge": {
-    "name": "Kaosar",
-    "mobile": "01910357607",
-    "email": "Kaosardeligram@gmail.com"
-  },
-  "secondary": {
-    "name": "Razib",
-    "mobile": "",
-    "email": "razib@gmail.com"
+    "primary": {
+      "name": "Kaosar",
+      "mobile": "01910357607",
+      "email": "Kaosardeligram@gmail.com"
+    },
+    "secondary": {
+      "name": "Razib",
+      "mobile": "",
+      "email": "razib@gmail.com"
+    }
   }
 }
