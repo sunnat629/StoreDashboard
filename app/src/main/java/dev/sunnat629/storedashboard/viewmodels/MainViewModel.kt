@@ -30,7 +30,7 @@ class MainViewModel @Inject constructor(
         getUserDetails()
     }
 
-    fun getAllBooks(){
+    private fun getAllBooks(){
         scope.launch {
             when (val result = apiDataSource.getBooks()) {
                 is NetworkResult.Success -> _allBooks.postValue(result.data)
@@ -39,7 +39,7 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun getUserDetails(){
+    private fun getUserDetails(){
         scope.launch {
             when (val result = apiDataSource.getUser()) {
                 is NetworkResult.Success -> _userDetails.postValue(result.data)

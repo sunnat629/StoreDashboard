@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">StoreDashboard</string>
+
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Stock</string>
+    <string name="tab_text_3">Progress</string>
+    <string name="tab_text_4">Account</string>
+    <string name="tab_text_5">Notice</string>
 </resources>

@@ -11,7 +11,7 @@ import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 import dev.sunnat629.storedashboard.di.qualifires.ApplicationContext
 import dev.sunnat629.storedashboard.ui.activities.MainActivity
-import dev.sunnat629.storedashboard.ui.fragments.MainFragment
+import dev.sunnat629.storedashboard.ui.fragments.*
 import dev.sunnat629.storedashboard.viewmodels.MainViewModel
 import dev.sunnat629.storedashboard.viewmodels.ViewModelFactory
 import kotlin.reflect.KClass
@@ -28,8 +28,24 @@ abstract class AppModule {
     @Binds
     abstract fun provideViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
+//    @ContributesAndroidInjector
+//    abstract fun bindMainFragment(): MainFragment
+
     @ContributesAndroidInjector
-    abstract fun bindMainFragment(): MainFragment
+    abstract fun bindHomeFragment(): HomeFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindNoticeFragment(): NoticeFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindProgressFragment(): ProgressFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindAccountFragment(): AccountFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindStockFragment(): StockFragment
+
 
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity
