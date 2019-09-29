@@ -25,6 +25,9 @@ class MainViewModel @Inject constructor(
     val errorMessage: LiveData<String>
         get() = _errorMessage
 
+    init {
+        getAllBooks()
+    }
 
     fun getAllBooks(){
         scope.launch {
@@ -35,5 +38,12 @@ class MainViewModel @Inject constructor(
         }
     }
 
-
+    fun getUserDetails(){
+        scope.launch {
+            when (val result = apiDataSource.getUser()) {
+                is NetworkResult.Success -> _userDetails.postValue(result.data)
+                is NetworkResult.Error -> _errorMessage.postValue(result.exception)
+            }
+        }
+    }
 }

@@ -1,8 +1,74 @@
-{
-  "id" : 1,
-  "book_name": "Nimikh Pane: Calculuser Poth Porivromon (Hardcover)",
-  "price": 400,
-  "in_stock": 10,
-  "request_pending": 3,
-  "cover_image": "/product_20420.png"
-}
+[
+  {
+    "id": 1,
+    "book_name": "Travel Bangladesh (Hardcover)",
+    "price": 400,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_20420.png"
+  },
+  {
+    "id": 2,
+    "book_name": "Paramoy Life er Paracetamol (Hardcover)",
+    "price": 200,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_20440.png"
+  },
+  {
+    "id": 3,
+    "book_name": "Recharge your Down Battery (Hardcover)",
+    "price": 180,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23510.png"
+  },
+  {
+    "id": 4,
+    "book_name": "Anko Vaiya (Hardcover)",
+    "price": 250,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23520.png"
+  },
+  {
+    "id": 5,
+    "book_name": "Vallage na (Hardcover)",
+    "price": 300,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23525.png"
+  },
+  {
+    "id": 6,
+    "book_name": "Programming er .... (Hardcover)",
+    "price": 350,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23540.png"
+  },
+  {
+    "id": 7,
+    "book_name": "Habluder Jonno ... (Hardcover)",
+    "price": 250,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23525.png"
+  },
+  {
+    "id": 1,
+    "book_name": "Book 23580 (Hardcover)",
+    "price": 240,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23580.png"
+  },
+  {
+    "id": 8,
+    "book_name": "Book 23590 (Hardcover)",
+    "price": 100,
+    "in_stock": 10,
+    "request_pending": 3,
+    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23590.png"
+  }
+]

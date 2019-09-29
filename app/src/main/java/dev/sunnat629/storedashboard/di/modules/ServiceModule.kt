@@ -1,7 +1,10 @@
 package dev.sunnat629.storedashboard.di.modules
 
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dev.sunnat629.storedashboard.models.apis.ApiDataSource
+import dev.sunnat629.storedashboard.models.apis.repositories.ApiRepositories
 import dev.sunnat629.storedashboard.models.apis.services.ApiServices
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -19,6 +22,12 @@ import javax.inject.Singleton
 )
 class ServiceModule {
 
+    @Singleton
+    @Provides
+    fun bindCartDataSource(apiServices: ApiServices): ApiDataSource {
+        return ApiRepositories(apiServices)
+    }
+
     /**
      * This singleton provider provides api services which contains all the api endpoints.
      *
@@ -26,7 +35,7 @@ class ServiceModule {
      * */
     @Singleton
     @Provides
-    fun provideImageApiServices(retrofit: Retrofit): ApiServices {
+    fun provideApiServices(retrofit: Retrofit): ApiServices {
         return retrofit.create(ApiServices::class.java)
     }
 }

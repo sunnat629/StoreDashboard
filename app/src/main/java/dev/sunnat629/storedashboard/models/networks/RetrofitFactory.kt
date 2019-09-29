@@ -1,10 +1,10 @@
 package dev.sunnat629.storedashboard.models.networks
 
-import dev.sunnat629.storedashboard.AppConstants.BASE_URL
+import dev.sunnat629.storedashboard.utils.AppConstants.BASE_URL
 import dev.sunnat629.storedashboard.BuildConfig
-import dev.sunnat629.storedashboard.AppConstants.CONNECT_TIMEOUT
-import dev.sunnat629.storedashboard.AppConstants.READ_TIMEOUT
-import dev.sunnat629.storedashboard.AppConstants.WRITE_TIMEOUT
+import dev.sunnat629.storedashboard.utils.AppConstants.CONNECT_TIMEOUT
+import dev.sunnat629.storedashboard.utils.AppConstants.READ_TIMEOUT
+import dev.sunnat629.storedashboard.utils.AppConstants.WRITE_TIMEOUT
 import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
