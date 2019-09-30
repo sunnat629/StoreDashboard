@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:padding="5dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -24,7 +24,9 @@
                 android:background="@drawable/search_bg"
                 android:orientation="vertical"
                 android:padding="10dp"
-                android:text="@string/search"
+                android:inputType="text"
+                android:cursorVisible="false"
+                android:hint="@string/search"
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintEnd_toStartOf="@+id/book_recycler_view"
                 app:layout_constraintStart_toEndOf="@+id/book_recycler_view"
