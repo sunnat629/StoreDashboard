@@ -10,7 +10,6 @@ import dev.sunnat629.storedashboard.R
 import dev.sunnat629.storedashboard.models.entities.Books
 import dev.sunnat629.storedashboard.ui.adapters.BookAdapter
 import kotlinx.android.synthetic.main.stock_fragment.*
-import timber.log.Timber
 
 class StockFragment : BaseFragment() {
 
@@ -32,7 +31,6 @@ class StockFragment : BaseFragment() {
 
     private fun initObserver() {
         bookListObserver = Observer {
-            Timber.tag("QWER").d("Size: ${it.size}")
             book_recycler_view.layoutManager = GridLayoutManager(context, 2)
             book_recycler_view.adapter = BookAdapter(context, it)
             book_recycler_view.recycledViewPool
@@ -52,7 +50,7 @@ class StockFragment : BaseFragment() {
 
     override fun onDetach() {
         super.onDetach()
-        viewModel.notification.removeObservers(this) // remove all observers of notification after destroy this activity
+        viewModel.allBooks.removeObservers(this) // remove all observers of notification after destroy this activity
         viewModel.errorMessage.removeObservers(this) // remove all observers of notification after destroy this activity
     }
 

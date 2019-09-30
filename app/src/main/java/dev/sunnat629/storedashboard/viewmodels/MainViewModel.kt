@@ -7,7 +7,6 @@ import dev.sunnat629.storedashboard.models.entities.Users
 import dev.sunnat629.storedashboard.models.networks.NetworkResult
 import kotlinx.coroutines.launch
 import lt.ito.devicetracker.NonNullMediatorLiveData
-import timber.log.Timber
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
@@ -31,7 +30,7 @@ class MainViewModel @Inject constructor(
         getUserDetails()
     }
 
-    private fun getAllBooks(){
+    private fun getAllBooks() {
         scope.launch {
             when (val result = apiDataSource.getBooks()) {
                 is NetworkResult.Success -> _allBooks.postValue(result.data)
@@ -40,7 +39,7 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    private fun getUserDetails(){
+    private fun getUserDetails() {
         scope.launch {
             when (val result = apiDataSource.getUser()) {
                 is NetworkResult.Success -> _userDetails.postValue(result.data)
@@ -48,6 +47,4 @@ class MainViewModel @Inject constructor(
             }
         }
     }
-
-
 }

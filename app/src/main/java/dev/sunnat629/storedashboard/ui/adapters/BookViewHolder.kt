@@ -35,7 +35,7 @@ class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             itemView.l_update_button.setOnClickListener { _ ->
                 val intent = Intent(context, ContentActivity::class.java)
-                intent.putExtra(AppConstants.BOOK_POSITION, it.id)
+                intent.putExtra(AppConstants.BOOK_POSITION, it)
                 context?.startActivity(intent)
             }
         }

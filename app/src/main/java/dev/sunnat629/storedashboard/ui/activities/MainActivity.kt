@@ -72,9 +72,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
+                if (tab?.position != 4) {
+                    tab_layout.getTabAt(4)?.orCreateBadge?.let {
+                        it.isVisible = true
+                        it.number = 10
+                    }
+                }
             }
 
             override fun onTabSelected(tab: TabLayout.Tab) {
+                if (tab.position == 4) tab_layout.getTabAt(4)?.removeBadge()
                 toolbar.visibility = if (tab.position == 0) View.VISIBLE else View.GONE
             }
         })
@@ -84,6 +91,10 @@ class MainActivity : AppCompatActivity() {
         tab_layout.getTabAt(2)?.icon = resources.getDrawable(R.drawable.trending, null)
         tab_layout.getTabAt(3)?.icon = resources.getDrawable(R.drawable.user, null)
         tab_layout.getTabAt(4)?.icon = resources.getDrawable(R.drawable.ic_notifications, null)
+        tab_layout.getTabAt(4)?.orCreateBadge?.let {
+            it.isVisible = true
+            it.number = 10
+        }
     }
 
     override fun onDestroy() {

@@ -1,7 +1,7 @@
 package dev.sunnat629.storedashboard.models.apis.repositories
 
-import dev.sunnat629.storedashboard.utils.LoggingTags.BASE_REPOSITORY
 import dev.sunnat629.storedashboard.models.networks.NetworkResult
+import dev.sunnat629.storedashboard.utils.LoggingTags.BASE_REPOSITORY
 import retrofit2.Response
 import timber.log.Timber
 import java.io.IOException

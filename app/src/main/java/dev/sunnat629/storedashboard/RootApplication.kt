@@ -19,12 +19,11 @@ import javax.inject.Inject
 class RootApplication : MultiDexApplication(), HasAndroidInjector {
 
     @Inject
-    lateinit var androidInjector : DispatchingAndroidInjector<Any>
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
     override fun androidInjector(): AndroidInjector<Any> {
         return androidInjector
     }
-
 
 
     override fun onCreate() {

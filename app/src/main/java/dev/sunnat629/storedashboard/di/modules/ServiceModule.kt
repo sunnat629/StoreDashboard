@@ -1,6 +1,5 @@
 package dev.sunnat629.storedashboard.di.modules
 
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dev.sunnat629.storedashboard.models.apis.ApiDataSource

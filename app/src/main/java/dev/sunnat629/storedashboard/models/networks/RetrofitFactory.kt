@@ -1,7 +1,7 @@
 package dev.sunnat629.storedashboard.models.networks
 
-import dev.sunnat629.storedashboard.utils.AppConstants.BASE_URL
 import dev.sunnat629.storedashboard.BuildConfig
+import dev.sunnat629.storedashboard.utils.AppConstants.BASE_URL
 import dev.sunnat629.storedashboard.utils.AppConstants.CONNECT_TIMEOUT
 import dev.sunnat629.storedashboard.utils.AppConstants.READ_TIMEOUT
 import dev.sunnat629.storedashboard.utils.AppConstants.WRITE_TIMEOUT

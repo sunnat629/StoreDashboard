@@ -10,12 +10,12 @@ import kotlinx.coroutines.cancel
 
 abstract class AppViewModel : ViewModel() {
 
-     protected val scope = CoroutineScope(Job() + Dispatchers.Main +Dispatchers.IO)
+    protected val scope = CoroutineScope(Job() + Dispatchers.Main + Dispatchers.IO)
 
-     val notification by lazy { SingleLiveEvent<Int>() }
+    val notification by lazy { SingleLiveEvent<Int>() }
 
-     override fun onCleared() {
-          scope.cancel()
-          super.onCleared()
-     }
+    override fun onCleared() {
+        scope.cancel()
+        super.onCleared()
+    }
 }

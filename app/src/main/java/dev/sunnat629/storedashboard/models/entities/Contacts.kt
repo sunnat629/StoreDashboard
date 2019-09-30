@@ -2,7 +2,7 @@ package dev.sunnat629.storedashboard.models.entities
 
 import com.google.gson.annotations.SerializedName
 
-data class Contacts (
+data class Contacts(
 
     @SerializedName("primary")
     val primary: ContactsDetails,
@@ -11,7 +11,7 @@ data class Contacts (
     val secondary: ContactsDetails
 )
 
-data class ContactsDetails (
+data class ContactsDetails(
 
     @SerializedName("name")
     val name: String,
