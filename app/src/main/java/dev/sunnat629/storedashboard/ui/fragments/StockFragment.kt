@@ -4,20 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
 import dev.sunnat629.storedashboard.R
-import dev.sunnat629.storedashboard.viewmodels.MainViewModel
+import dev.sunnat629.storedashboard.models.entities.Books
+import dev.sunnat629.storedashboard.ui.adapters.BookAdapter
+import kotlinx.android.synthetic.main.stock_fragment.*
 import timber.log.Timber
-import javax.inject.Inject
 
 class StockFragment : BaseFragment() {
 
-    companion object {
-        fun newInstance() = StockFragment()
-    }
+    private lateinit var bookListObserver: Observer<List<Books>>
+    private lateinit var networkStateObserver: Observer<String>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,17 +26,37 @@ class StockFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        initAdapter()
+        initObserver()
+    }
 
-        viewModel.allBooks.observe(this, Observer {
-            Timber.tag("ASDF").d(it.toString())
-        })
+    private fun initObserver() {
+        bookListObserver = Observer {
+            Timber.tag("QWER").d("Size: ${it.size}")
+            book_recycler_view.layoutManager = GridLayoutManager(context, 2)
+            book_recycler_view.adapter = BookAdapter(context, it)
+            book_recycler_view.recycledViewPool
+        }
 
-        viewModel.errorMessage.observe(this, Observer {
-            Timber.tag("ASDF").e(it.toString())
-        })
+        networkStateObserver = Observer {
+            //todo
+        }
 
-        viewModel.userDetails.observe(this, Observer {
-            Timber.tag("ASDF").d(it.toString())
-        })
+        viewModel.allBooks.observe(this, bookListObserver)
+        viewModel.errorMessage.observe(this, networkStateObserver)
+    }
+
+    private fun initAdapter() {
+
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        viewModel.notification.removeObservers(this) // remove all observers of notification after destroy this activity
+        viewModel.errorMessage.removeObservers(this) // remove all observers of notification after destroy this activity
+    }
+
+    companion object {
+        fun newInstance() = StockFragment()
     }
 }

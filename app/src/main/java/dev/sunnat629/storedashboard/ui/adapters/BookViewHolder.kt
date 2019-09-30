@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.book_list_items.view.*
  * */
 class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    fun bindTo(context: Context, singleBook: Books?) {
+    fun bindTo(context: Context?, singleBook: Books?) {
         singleBook?.let {
             itemView.l_book_name.text = it.bookName
             itemView.l_book_price.text = "\$ ${it.price}"
@@ -36,7 +36,7 @@ class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             itemView.l_update_button.setOnClickListener { _ ->
                 val intent = Intent(context, ContentActivity::class.java)
                 intent.putExtra(AppConstants.BOOK_POSITION, it.id)
-                context.startActivity(intent)
+                context?.startActivity(intent)
             }
         }
     }

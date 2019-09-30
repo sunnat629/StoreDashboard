@@ -2,14 +2,11 @@ package dev.sunnat629.storedashboard.ui.activities
 
 import android.os.Build
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.transition.Slide
-import androidx.transition.TransitionManager
 import com.google.android.material.tabs.TabLayout
 import dagger.android.AndroidInjection
 import dev.sunnat629.storedashboard.R
@@ -25,7 +22,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var viewModel: MainViewModel
 
-    lateinit var notificationObserver: Observer<Int>
+    private lateinit var notificationObserver: Observer<Int>
+    private lateinit var networkStateObserver: Observer<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
@@ -45,7 +43,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        networkStateObserver = Observer {
+            //todo
+        }
+
         viewModel.notification.observe(this, notificationObserver)
+        viewModel.errorMessage.observe(this, networkStateObserver)
     }
 
     private fun setToolbar() {
@@ -86,5 +89,6 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         viewModel.notification.removeObservers(this) // remove all observers of notification after destroy this activity
+        viewModel.errorMessage.removeObservers(this) // remove all observers of notification after destroy this activity
     }
 }

@@ -53,20 +53,12 @@
     "price": 250,
     "in_stock": 10,
     "request_pending": 3,
-    "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23525.png"
-  },
-  {
-    "id": 1,
-    "book_name": "Book 23580 (Hardcover)",
-    "price": 240,
-    "in_stock": 10,
-    "request_pending": 3,
     "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23580.png"
   },
   {
     "id": 8,
-    "book_name": "Book 23590 (Hardcover)",
-    "price": 100,
+    "book_name": "Book 23580 (Hardcover)",
+    "price": 240,
     "in_stock": 10,
     "request_pending": 3,
     "cover_image": "https://raw.githubusercontent.com/sunnat629/StoreDashboard/master/contents/product_23590.png"

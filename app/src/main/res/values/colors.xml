@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">@android:color/holo_red_dark</color>
     <color name="view">#E5E5E5</color>
-    <color name="colorPrimaryOpt">#8C783392</color>
-    <color name="colorPrimaryOpt2">#A683392</color>
+    <color name="colorPrimaryOpt">#783392</color>
+    <color name="colorPrimaryOpt2">#e4d6e9</color>
+    <color name="item_bg_strock">#DDDDDD</color>
 </resources>

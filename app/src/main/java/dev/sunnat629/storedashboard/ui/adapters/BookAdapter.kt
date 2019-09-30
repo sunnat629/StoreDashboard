@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.sunnat629.storedashboard.R
 import dev.sunnat629.storedashboard.models.entities.Books
 
-class ImageAdapter(
-    private val context: Context,
+class BookAdapter(
+    private val context: Context?,
     private val bookList: List<Books>
 ) : RecyclerView.Adapter<BookViewHolder>() {
 
