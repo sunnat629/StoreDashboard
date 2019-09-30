@@ -19,4 +19,5 @@
     <string name="in_stock">In Stock</string>
     <string name="pending">Request Pending</string>
     <string name="update">Update</string>
+    <string name="see_all">See All</string>
 </resources>

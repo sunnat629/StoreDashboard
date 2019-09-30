@@ -21,7 +21,7 @@ class ContentActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
 
     private lateinit var Books: Observer<Books>
-    lateinit var notificationObserver: Observer<List<Books>>
+    private lateinit var notificationObserver: Observer<List<Books>>
 
     private var bookPosition = 0
 
@@ -48,8 +48,9 @@ class ContentActivity : AppCompatActivity() {
                 .into(book_cover)
 
             book_name.text = book.bookName
-            book_price.text = "\$${book.price}"
-            stock_value.setText(book.virtualStock)
+            book_price.text = "\$ ${book.price}"
+            stock_value.hint = book.virtualStock
+            //todo
             in_stock_value.text = book.inStock.toString()
             pending_value.text = book.requestPending.toString()
         }
