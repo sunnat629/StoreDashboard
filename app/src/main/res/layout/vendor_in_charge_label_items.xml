@@ -16,7 +16,7 @@
             android:id="@+id/vendor_p_label"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="start|center"
+            android:gravity="start"
             android:text="@string/primary" />
 
         <LinearLayout
@@ -63,7 +63,7 @@
             android:id="@+id/vendor_label"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="start|center"
+            android:gravity="start"
             android:text="@string/secondary" />
 
         <LinearLayout

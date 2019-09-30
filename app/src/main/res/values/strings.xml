@@ -15,4 +15,7 @@
     <string name="primary">Primary</string>
     <string name="vendor">Vendor-in-charge</string>
     <string name="secondary">Secondary</string>
+    <string name="virtual">Virtual Stock</string>
+    <string name="in_stock">In Stock</string>
+    <string name="pending">Request Pending</string>
 </resources>

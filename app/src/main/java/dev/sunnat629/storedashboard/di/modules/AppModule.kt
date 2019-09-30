@@ -10,6 +10,7 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 import dev.sunnat629.storedashboard.di.qualifires.ApplicationContext
+import dev.sunnat629.storedashboard.ui.activities.ContentActivity
 import dev.sunnat629.storedashboard.ui.activities.MainActivity
 import dev.sunnat629.storedashboard.ui.fragments.*
 import dev.sunnat629.storedashboard.viewmodels.MainViewModel
@@ -48,6 +49,9 @@ abstract class AppModule {
 
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindContentActivity(): ContentActivity
 
     @Binds
     @IntoMap
