@@ -7,6 +7,7 @@ import dev.sunnat629.storedashboard.models.entities.Users
 import dev.sunnat629.storedashboard.models.networks.NetworkResult
 import kotlinx.coroutines.launch
 import lt.ito.devicetracker.NonNullMediatorLiveData
+import timber.log.Timber
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
@@ -47,4 +48,6 @@ class MainViewModel @Inject constructor(
             }
         }
     }
+
+
 }

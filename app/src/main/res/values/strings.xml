@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">StoreDashboard</string>
+    <string name="app_name">Smart Store</string>
 
     <string name="tab_text_1">Home</string>
     <string name="tab_text_2">Stock</string>
     <string name="tab_text_3">Progress</string>
     <string name="tab_text_4">Account</string>
     <string name="tab_text_5">Notice</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="nothing">Nothing Found</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="primary">Primary</string>
+    <string name="vendor">Vendor-in-charge</string>
+    <string name="secondary">Secondary</string>
 </resources>

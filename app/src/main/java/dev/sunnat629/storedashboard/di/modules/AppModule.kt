@@ -28,9 +28,6 @@ abstract class AppModule {
     @Binds
     abstract fun provideViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
-//    @ContributesAndroidInjector
-//    abstract fun bindMainFragment(): MainFragment
-
     @ContributesAndroidInjector
     abstract fun bindHomeFragment(): HomeFragment
 
@@ -46,6 +43,8 @@ abstract class AppModule {
     @ContributesAndroidInjector
     abstract fun bindStockFragment(): StockFragment
 
+    @ContributesAndroidInjector
+    abstract fun bindBaseFragment(): BaseFragment
 
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity

@@ -11,13 +11,7 @@ import dev.sunnat629.storedashboard.R
 import dev.sunnat629.storedashboard.ui.fragments.*
 
 class TabsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
-    FragmentPagerAdapter(fm, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-
-    //    <string name="tab_text_1">Home</string>
-    //    <string name="tab_text_2">Stock</string>
-    //    <string name="tab_text_3">Progress</string>
-    //    <string name="tab_text_4">Account</string>
-    //    <string name="tab_text_5">Notice</string>
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
