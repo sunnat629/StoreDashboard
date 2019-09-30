@@ -3,29 +3,33 @@ package dev.sunnat629.storedashboard.ui.adapters
 import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import dev.sunnat629.storedashboard.R
 import dev.sunnat629.storedashboard.models.entities.Books
 
 class BookAdapter(
     private val context: Context?,
     private val bookList: List<Books>
-) : RecyclerView.Adapter<BookViewHolder>() {
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        holder.bindTo(context, bookList[position])
+    private val TYPE_ITEM = 1
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (holder is BookViewHolder) {
+            holder.bindTo(context, bookList[position])
+        } else if (holder is HeaderViewHolder) {
+            holder.bindTo()
+        }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
-            // This layout will show, if data fetched successfully
-            R.layout.book_list_items -> BookViewHolder.create(parent)
+            TYPE_ITEM -> BookViewHolder.create(parent)
 
             else -> throw IllegalArgumentException("unknown view type")
         }
     }
 
     override fun getItemViewType(position: Int): Int {
-        return R.layout.book_list_items
+        return TYPE_ITEM
     }
 
     override fun getItemCount(): Int = bookList.size

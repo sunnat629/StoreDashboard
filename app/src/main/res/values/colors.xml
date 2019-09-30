@@ -8,4 +8,5 @@
     <color name="colorPrimaryOpt2">#e4d6e9</color>
     <color name="item_bg_strock">#DDDDDD</color>
     <color name="stock_value_bg">#f3f3f3</color>
+    <color name="search_bg">#ECEDF1</color>
 </resources>

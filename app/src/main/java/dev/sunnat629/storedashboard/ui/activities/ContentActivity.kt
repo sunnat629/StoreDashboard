@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -43,7 +44,7 @@ class ContentActivity : AppCompatActivity() {
 
     private fun initButtons() {
         details_update.setOnClickListener {
-            viewModel.notification.value = stockValue
+            Toast.makeText(applicationContext, "Stock Updated", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -13,7 +13,6 @@ import javax.inject.Inject
  * RootApplication.kt
  * This class uses to specialize tasks that need to run before the creation of your first activity.
  *
- * @property component contains the component interface of the dagger2
  * @property Timber is the logger for this project which is initialized only in Debug Mode.
  * */
 class RootApplication : MultiDexApplication(), HasAndroidInjector {
@@ -24,7 +23,6 @@ class RootApplication : MultiDexApplication(), HasAndroidInjector {
     override fun androidInjector(): AndroidInjector<Any> {
         return androidInjector
     }
-
 
     override fun onCreate() {
         super.onCreate()
