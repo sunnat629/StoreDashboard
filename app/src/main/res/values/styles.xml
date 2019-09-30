@@ -23,4 +23,11 @@
         <item name="textAllCaps">true</item>
     </style>
 
+    <style name="MyCustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimaryOpt</item>
+        <item name="strokeColor">@color/colorPrimaryOpt</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="cornerRadius">90dp</item>
+    </style>
+
 </resources>

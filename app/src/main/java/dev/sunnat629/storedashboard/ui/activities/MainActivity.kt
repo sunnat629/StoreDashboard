@@ -2,11 +2,14 @@ package dev.sunnat629.storedashboard.ui.activities
 
 import android.os.Build
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.transition.Slide
+import androidx.transition.TransitionManager
 import com.google.android.material.tabs.TabLayout
 import dagger.android.AndroidInjection
 import dev.sunnat629.storedashboard.R
@@ -14,9 +17,7 @@ import dev.sunnat629.storedashboard.ui.TabsPagerAdapter
 import dev.sunnat629.storedashboard.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.tab_items.*
-import timber.log.Timber
 import javax.inject.Inject
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTabLayouts() {
+
         val tabsPagerAdapter = TabsPagerAdapter(this, supportFragmentManager)
         view_pager.adapter = tabsPagerAdapter
         tab_layout.setupWithViewPager(view_pager)
@@ -70,14 +72,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabSelected(tab: TabLayout.Tab) {
-                if (tab.position == 0) {
-                    toolbar.visibility = View.VISIBLE
-                } else {
-                    toolbar.visibility = View.GONE
-                }
+                toolbar.visibility = if (tab.position == 0) View.VISIBLE else View.GONE
             }
         })
-
 
         tab_layout.getTabAt(0)?.icon = resources.getDrawable(R.drawable.home, null)
         tab_layout.getTabAt(1)?.icon = resources.getDrawable(R.drawable.hashtag, null)

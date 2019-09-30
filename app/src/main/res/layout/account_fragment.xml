@@ -26,9 +26,9 @@
         android:id="@+id/profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:textAppearance="?android:textAppearanceLarge"
         android:textColor="@android:color/black"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/profile_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -55,14 +55,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:textColor="@color/colorPrimary"
+        android:text="@string/contact_person"
         android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        android:text="@string/contact_person" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/contact_person_layout"
@@ -102,16 +102,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:textColor="@color/colorPrimary"
+        android:text="@string/vendor"
         android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/view1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view1"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
-        android:text="@string/vendor" />
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -128,6 +129,4 @@
             app:layout_constraintEnd_toEndOf="@+id/view1" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
