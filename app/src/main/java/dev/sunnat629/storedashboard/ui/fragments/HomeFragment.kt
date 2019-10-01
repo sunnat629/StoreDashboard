@@ -53,7 +53,7 @@ class HomeFragment : BaseFragment() {
         bookListObserver = Observer {
             home_recycler_view.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            home_recycler_view.adapter = BookAdapter(context, it, true)
+            home_recycler_view.adapter = BookAdapter(context, it.take(4), true)
             home_recycler_view.recycledViewPool
         }
 
