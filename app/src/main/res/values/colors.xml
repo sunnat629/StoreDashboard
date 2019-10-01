@@ -10,4 +10,5 @@
     <color name="stock_value_bg">#f3f3f3</color>
     <color name="search_bg">#ECEDF1</color>
     <color name="lighter_gray">#ddd</color>
+    <color name="tab_default">@android:color/black</color>
 </resources>
