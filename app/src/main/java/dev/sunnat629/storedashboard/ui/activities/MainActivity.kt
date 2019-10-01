@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.tabs.TabLayout
 import dagger.android.AndroidInjection
+import dev.sunnat629.storedashboard.OnDetailsClickListener
 import dev.sunnat629.storedashboard.R
 import dev.sunnat629.storedashboard.ui.TabsPagerAdapter
 import dev.sunnat629.storedashboard.viewmodels.MainViewModel
@@ -17,7 +18,7 @@ import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.tab_items.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnDetailsClickListener {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -91,6 +92,10 @@ class MainActivity : AppCompatActivity() {
             it.isVisible = true
             it.number = 10
         }
+    }
+
+    override fun goToUserDetails() {
+        tab_layout.getTabAt(3)?.select()
     }
 
     override fun onDestroy() {

@@ -21,4 +21,6 @@
     <string name="update">Update</string>
     <string name="see_all">See All</string>
     <string name="search">Search</string>
+    <string name="stories">Product Stories</string>
+    <string name="show_details">Show details</string>
 </resources>

@@ -26,7 +26,7 @@ class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         singleBook?.let {
             itemView.l_book_name.text = it.bookName
             itemView.l_book_price.text = "\$ ${it.price}"
-            itemView.l_book_quantity.text = "Qty ${it.inStock}"
+            itemView.l_book_quantity.text = "Qty: ${it.inStock}"
 
             Picasso.get()
                 .load(it.coverImage)

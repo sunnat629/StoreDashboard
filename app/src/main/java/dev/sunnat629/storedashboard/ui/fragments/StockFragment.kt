@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import dev.sunnat629.storedashboard.R
@@ -31,13 +32,17 @@ class StockFragment : BaseFragment() {
 
     private fun initObserver() {
         bookListObserver = Observer {
-            book_recycler_view.layoutManager = GridLayoutManager(context, 2)
-            book_recycler_view.adapter = BookAdapter(context, it)
-            book_recycler_view.recycledViewPool
+            stock_recycler_view.layoutManager = GridLayoutManager(context, 2)
+            stock_recycler_view.adapter = BookAdapter(context, it, false)
+            stock_recycler_view.recycledViewPool
         }
 
         networkStateObserver = Observer {
-            //todo
+            Toast.makeText(
+                context,
+                "Please Check Internet Connection",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         viewModel.allBooks.observe(this, bookListObserver)

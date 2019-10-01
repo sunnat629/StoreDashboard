@@ -8,21 +8,20 @@ import dev.sunnat629.storedashboard.R
 
 
 /**
- * BookViewHolder.kt
- * This is a RecyclerView ViewHolder and show each row when the data fetched successfully
+ * FooterViewHolder.kt
+ * This is a RecyclerView ViewHolder and show the footer view of the recyclerview
  *
  * @param itemView is the View of the RecyclerView
  * */
-class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    fun bindTo() {
-    }
+    fun bindTo() {}
 
     companion object {
-        fun create(parent: ViewGroup): HeaderViewHolder {
+        fun create(parent: ViewGroup): FooterViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
-            val view = layoutInflater.inflate(R.layout.header_list_items, parent, false)
-            return HeaderViewHolder(view)
+            val view = layoutInflater.inflate(R.layout.see_all, parent, false)
+            return FooterViewHolder(view)
         }
     }
 }
