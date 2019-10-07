@@ -6,7 +6,7 @@ import dev.sunnat629.storedashboard.models.entities.Books
 import dev.sunnat629.storedashboard.models.entities.Users
 import dev.sunnat629.storedashboard.models.networks.NetworkResult
 import kotlinx.coroutines.launch
-import lt.ito.devicetracker.NonNullMediatorLiveData
+import dev.sunnat629.storedashboard.NonNullMediatorLiveData
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(

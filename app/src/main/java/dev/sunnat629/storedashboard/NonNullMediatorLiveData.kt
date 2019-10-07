@@ -1,4 +1,4 @@
-package lt.ito.devicetracker
+package dev.sunnat629.storedashboard
 
 import androidx.lifecycle.MediatorLiveData
 

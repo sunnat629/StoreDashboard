@@ -19,7 +19,6 @@ import javax.inject.Singleton
  * @see NetworkModule for more details
  * @see ServiceModule for more details
  * @see AppModule for more details
-
  * */
 @Singleton
 @Component(

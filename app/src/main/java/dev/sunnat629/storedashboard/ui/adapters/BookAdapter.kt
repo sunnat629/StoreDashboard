@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.sunnat629.storedashboard.models.entities.Books
 import dev.sunnat629.storedashboard.utils.AppConstants.TYPE_FOOTER
+import dev.sunnat629.storedashboard.utils.AppConstants.TYPE_HEADER
 import dev.sunnat629.storedashboard.utils.AppConstants.TYPE_ITEM
 
 class BookAdapter(
@@ -25,6 +26,7 @@ class BookAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             TYPE_ITEM -> BookViewHolder.create(parent)
+            TYPE_HEADER -> HeaderViewHolder.create(parent)
             TYPE_FOOTER -> FooterViewHolder.create(parent)
             else -> throw IllegalArgumentException("unknown view type")
         }
